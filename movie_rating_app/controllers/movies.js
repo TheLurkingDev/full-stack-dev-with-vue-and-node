@@ -1,4 +1,4 @@
-const MovieSchema = require('../models.Movie.js');
+const MovieSchema = require('../models/Movie.js');
 
 module.exports.controller = (app) => {
     // Add a new movie
