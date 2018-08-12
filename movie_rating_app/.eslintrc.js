@@ -28,6 +28,7 @@ module.exports = {
     'eol-last': 'off',
     'semi': 'off',
     'indent': 'off',
-    'space-before-function-paren': 'off'
+    'space-before-function-paren': 'off',
+    'keyword-spacing': 'off'
   }
 }
