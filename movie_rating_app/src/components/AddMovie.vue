@@ -16,12 +16,16 @@
         <v-select
         label="Movie Release Year"
         v-model="release_year"
+        required
+        :rules="releaseRules"
         :items="years"
         >
         </v-select>
         <v-text-field
         label="Movie Genre"
         v-model="genre"
+        required
+        :rules="genreRules"
         >
         </v-text-field>
         <v-btn
@@ -47,7 +51,14 @@ export default {
         genre: '',
         release_year: '',
         nameRules: [
-            v => !!v || 'Movie name is required.'
+            v => !!v || 'Name is required.'
+        ],
+        genreRules: [
+            v => !!v || 'Genre is required.',
+            v => (v && v.length <= 80) || 'Genre must be no more than 80 characters.'
+        ],
+        releaseRules: [
+            v => !!v || 'Release Year is required.'
         ],
         select: null,
         years: [
