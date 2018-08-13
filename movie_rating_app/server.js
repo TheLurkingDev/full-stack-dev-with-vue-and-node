@@ -8,6 +8,7 @@ const fs = require('fs');
 const app = express();
 const router = express.Router();
 app.use(morgan('combined'));
+app.use(bodyParser.json());
 app.use(cors());
 
 // connect to mongoDB
@@ -18,11 +19,11 @@ mongoose.connect('mongodb://localhost/movie_rating_app', function () {
     process.exit(1);
 });
 
-// Include controllers.
-fs.readdirSync('controllers').forEach(function(file) {
-    if(file.substr(-3) === '.js') {
-        const route = require('./controllers/' + file);
-        route.controller(app);
+// Include controllers
+fs.readdirSync('controllers').forEach(function (file) {
+    if(file.substr(-3) == '.js') {
+      const route = require('./controllers/' + file)
+      route.controller(app)
     }
 });
 
