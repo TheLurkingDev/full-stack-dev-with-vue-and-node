@@ -29,6 +29,7 @@ module.exports = {
     'semi': 'off',
     'indent': 'off',
     'space-before-function-paren': 'off',
-    'keyword-spacing': 'off'
+    'keyword-spacing': 'off',
+    'eqeqeq': 'off'
   }
 }
