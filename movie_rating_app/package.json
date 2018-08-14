@@ -26,6 +26,7 @@
     "nodemon": "^1.18.3",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
+    "vue-sweetalert2": "^1.5.2",
     "vuetify": "^1.1.9"
   },
   "devDependencies": {

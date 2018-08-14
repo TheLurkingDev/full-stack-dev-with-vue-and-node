@@ -6,11 +6,13 @@ import BootstrapVue from 'bootstrap-vue';
 
 import Vue from 'vue';
 import Vuetify from 'vuetify';
+import VueSweetAlert2 from 'vue-sweetalert2';
 import App from './App';
 import router from './router';
 
 Vue.use(BootstrapVue);
 Vue.use(Vuetify);
+Vue.use(VueSweetAlert2);
 
 Vue.config.productionTip = false;
 

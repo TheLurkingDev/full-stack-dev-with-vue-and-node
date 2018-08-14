@@ -85,11 +85,12 @@ export default {
                     }
                 })
                 .then(() => {
+                    this.$swal('Movie added successfully!');
                     this.$router.push({ name: 'Home' });
                     this.$refs.form.reset();
                 })
                 .catch(() => {
-                    // Add error handling.
+                    this.$swal('Unable to add movie. :(');
                 });
             }
 
