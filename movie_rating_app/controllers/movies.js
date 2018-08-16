@@ -1,6 +1,16 @@
 const MovieSchema = require('../models/Movie.js');
 
 module.exports.controller = (app) => {
+    // Fetch all movies
+    app.get('/movies', (req, res) => {
+        MovieSchema.find({}, 'name description release_year genre',
+        (error, movies) => {
+            if(error) { console.log(error); }
+            res.send({
+                movies
+            });
+        });
+    });
     // Add a new movie
     app.post('/movies', (req, res) => {
         const newMovie = new MovieSchema({
