@@ -33,9 +33,9 @@
         },
         methods: {
             async fetchMovie() {
-                return axios ({
+                return axios({
                     method: 'get',
-                    url: `http://localhost:8081/movies/${this.$route.params.id}`            
+                    url: `http://localhost:8081/movies/${this.$route.params.id}`
                 })
                 .then((response) => {
                     this.movie = response.data;

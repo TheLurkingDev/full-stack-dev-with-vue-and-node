@@ -7,7 +7,7 @@
             <div class="headline">
               <v-btn flat v-bind:to="`/movies/${movie._id}`">
                 {{ movie.name }}
-              </v-btn>              
+              </v-btn>
             </div>
             <span class="grey--text">
               {{ movie.release_year }} - {{ movie.genre }}
